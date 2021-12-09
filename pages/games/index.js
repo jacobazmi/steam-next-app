@@ -25,7 +25,20 @@ const Games = ({ games }) => {
         {games.map((game) => (
           <Link href={"/games/" + game.appid} key={game.appid}>
             <a className={styles.single}>
-              <h3>{game.name}</h3>
+              <div>
+                <p style={{ float: "left", justify_content: "center" }}>
+                  <img
+                    src={
+                      "http://media.steampowered.com/steamcommunity/public/images/apps/" +
+                      game.appid +
+                      "/" +
+                      game.img_icon_url +
+                      ".jpg"
+                    }
+                  />
+                </p>
+                <h3>{game.name}</h3>
+              </div>
             </a>
           </Link>
         ))}
