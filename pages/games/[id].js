@@ -45,7 +45,9 @@ const Details = ({ game }) => {
         }
       />
       <h1>{game.name}</h1>
-      <p>{game.playtime_forever}</p>
+      <h3>
+        {"Time played: " + (game.playtime_forever / 60).toFixed(2) + " hours"}
+      </h3>
     </div>
   );
 };
