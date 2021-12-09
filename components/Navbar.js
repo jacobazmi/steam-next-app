@@ -5,7 +5,7 @@ import AuthContext from "../stores/authContext";
 import styles from "../styles/Home.module.css";
 
 const Navbar = () => {
-  const { user, login } = useContext(AuthContext);
+  const { user, login, logout } = useContext(AuthContext);
   console.log(user);
 
   return (
@@ -23,9 +23,11 @@ const Navbar = () => {
       <Link href="/games">
         <a>Games</a>
       </Link>
-
       <a onClick={login} className="loginBtn">
         Login/Signup
+      </a>
+      <a onClick={logout} className="logoutBtn">
+        Logout
       </a>
     </nav>
   );

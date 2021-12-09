@@ -26,7 +26,7 @@ const Games = ({ games }) => {
           <Link href={"/games/" + game.appid} key={game.appid}>
             <a className={styles.single}>
               <div>
-                <p style={{ float: "left", justify_content: "center" }}>
+                <p style={{ float: "left" }}>
                   <img
                     src={
                       "http://media.steampowered.com/steamcommunity/public/images/apps/" +
