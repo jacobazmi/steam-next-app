@@ -1,7 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useContext } from "react";
+import AuthContext from "../stores/authContext";
+import styles from "../styles/Home.module.css";
 
 const Navbar = () => {
+  const { user, login } = useContext(AuthContext);
+  console.log(user);
+
   return (
     <nav>
       <div className="logo">
@@ -17,6 +23,10 @@ const Navbar = () => {
       <Link href="/games">
         <a>Games</a>
       </Link>
+
+      <a onClick={login} className="loginBtn">
+        Login/Signup
+      </a>
     </nav>
   );
 };
