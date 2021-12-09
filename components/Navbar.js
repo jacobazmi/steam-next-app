@@ -23,12 +23,17 @@ const Navbar = () => {
       <Link href="/games">
         <a>Games</a>
       </Link>
-      <a onClick={login} className="loginBtn">
-        Login/Signup
-      </a>
-      <a onClick={logout} className="logoutBtn">
-        Logout
-      </a>
+      {!user && (
+        <a onClick={login} className="loginBtn">
+          Login/Signup
+        </a>
+      )}
+      {user && <a>{user.email}</a>}
+      {user && (
+        <a onClick={logout} className="logoutBtn">
+          Logout
+        </a>
+      )}
     </nav>
   );
 };
