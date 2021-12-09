@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../../styles/Games.module.css";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export const getStaticProps = async () => {
   const res = await fetch(
