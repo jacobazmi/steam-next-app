@@ -26,7 +26,6 @@ export const getStaticProps = async (context) => {
   const games = await data.response.games;
   const index = games.findIndex((x) => x.appid === id);
   const game = await games[index];
-  // const gameInfo = await games[id];
 
   return {
     props: { game: game },
