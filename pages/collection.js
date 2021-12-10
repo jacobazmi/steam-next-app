@@ -11,7 +11,7 @@ const Collection = () => {
   useEffect(() => {
     if (authReady) {
       fetch(
-        ".netlify/functions/games",
+        ".netlify/functions/collection",
         user && {
           headers: { Authorization: "Bearer " + user.token.access_token },
         }
