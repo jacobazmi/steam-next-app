@@ -27,13 +27,13 @@ const Navbar = () => {
         <>
           {!user && (
             <a onClick={login} className={styles.loginBtn}>
-              Login/Signup
+              Log in / Sign up
             </a>
           )}
-          {user && <a>{user.email}</a>}
+          {user && <a>{user.user_metadata.full_name}</a>}
           {user && (
             <a onClick={logout} className={styles.loginBtn}>
-              Logout
+              Log out
             </a>
           )}
         </>
