@@ -26,13 +26,13 @@ const Navbar = () => {
       {authReady && (
         <>
           {!user && (
-            <a onClick={login} className="loginBtn">
+            <a onClick={login} className={styles.loginBtn}>
               Login/Signup
             </a>
           )}
           {user && <a>{user.email}</a>}
           {user && (
-            <a onClick={logout} className="logoutBtn">
+            <a onClick={logout} className={styles.loginBtn}>
               Logout
             </a>
           )}
