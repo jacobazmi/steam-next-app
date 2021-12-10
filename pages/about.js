@@ -10,7 +10,7 @@ const About = () => {
   useEffect(() => {
     if (authReady) {
       fetch(
-        ".netlify/functions/mario",
+        ".netlify/functions/games",
         user && {
           headers: { Authorization: "Bearer " + user.token.access_token },
         }
