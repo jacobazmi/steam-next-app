@@ -17,11 +17,11 @@ const Navbar = () => {
       <Link href="/">
         <a>Home</a>
       </Link>
-      <Link href="/about">
-        <a>About</a>
+      <Link href="/collection">
+        <a>Collection</a>
       </Link>
-      <Link href="/games">
-        <a>Games</a>
+      <Link href="/steam">
+        <a>Steam</a>
       </Link>
       {authReady && (
         <>

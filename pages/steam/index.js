@@ -15,16 +15,16 @@ export const getStaticProps = async () => {
   };
 };
 
-const Games = ({ games }) => {
+const Steam = ({ games }) => {
   return (
     <>
       <Head>
         <title>Game List | Games</title>
       </Head>
       <div>
-        <h1>All Games</h1>
+        <h1>Steam Library</h1>
         {games.map((game) => (
-          <Link href={"/games/" + game.appid} key={game.appid}>
+          <Link href={"/steam/" + game.appid} key={game.appid}>
             <a className={styles.single}>
               <div>
                 <p style={{ float: "left" }}>
@@ -48,4 +48,4 @@ const Games = ({ games }) => {
   );
 };
 
-export default Games;
+export default Steam;
